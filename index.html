@@ -155,54 +155,47 @@
 
     <script>
         const categorias = [
-            { id: 'COCKTAILS', foto: 'categorias/cocktails.jpg' },
-            { id: 'NUESTROS CLASICOS', foto: 'categorias/clasicos.jpg' },
+            { id: 'COCKTAILS', foto: 'categorias/clasicos.jpg' },
             { id: 'COCKTAILS SIN ALCOHOL', foto: 'categorias/sin_alcohol.jpg' },
             { id: 'BATIDOS', foto: 'categorias/batidos.jpg' }
         ];
 
         const platos = [
-            // CATEGORÍA: COCKTAILS (Inferencia de ingredientes basada en nombre)
+            // CATEGORÍA: COCKTAILS
             { id: 1, categoria: 'COCKTAILS', nombre: 'SCARLET', precio: '11,00 €', foto: 'cocteles/smoked_negroni.webp', ingredientes: 'Ginebra artesanal, Campari infusionado, Vermut rojo dulce. Toque ahumado con madera de roble.', alergenos: ['🍷'] },
-            { id: 2, categoria: 'COCKTAILS', nombre: 'FLORISEE', precio: '10,00 €', foto: 'cocteles/mediterranean_mule.webp', ingredientes: 'Vodka premium, Ginger Beer, zumo de lima fresca, toque mediterráneo de romero y tomillo.', alergenos: [] },
             { id: 3, categoria: 'COCKTAILS', nombre: 'BANANA PIE', precio: '12,00 €', foto: 'cocteles/tiki_taka.webp', ingredientes: 'Mezcla de rones añejos, zumo de piña, maracuyá, sirope de almendras (Orgeat) y falernum casero.', alergenos: ['🌰'] },
             { id: 4, categoria: 'COCKTAILS', nombre: 'MEZCALITA', precio: '11,00 €', foto: 'cocteles/el_charrito.webp', ingredientes: 'Tequila reposado, licor de naranja, zumo de agave, lima y un toque picante de jalapeño en el borde.', alergenos: [] },
-            { id: 5, categoria: 'COCKTAILS', nombre: 'CALAVERA', precio: '9,00 €', foto: 'cocteles/clover_club.webp', ingredientes: 'Ginebra, sirope de frambuesa casero, zumo de limón y clara de huevo para una textura sedosa.', alergenos: ['🥚'] },
-            { id: 6, categoria: 'COCKTAILS', nombre: 'ZEST', precio: '9,00 €', foto: 'cocteles/tommys_margarita.webp', ingredientes: 'Tequila 100% agave, zumo de lima fresca y néctar de agave. Servido con hielo.', alergenos: [] },
             { id: 8, categoria: 'COCKTAILS', nombre: 'PALOMA DE MANGO', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
             { id: 9, categoria: 'COCKTAILS', nombre: 'COCO Y LIMON', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
             { id: 10, categoria: 'COCKTAILS', nombre: 'FRESH & SPICY', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
             { id: 11, categoria: 'COCKTAILS', nombre: 'COOLER', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
-            { id: 12, categoria: 'COCKTAILS', nombre: 'TEQUILA SUNSET', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
-            { id: 13, categoria: 'COCKTAILS', nombre: 'BERRY COLLINS', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
             { id: 14, categoria: 'COCKTAILS', nombre: 'BLOODY GLADE', precio: '10,00 €', foto: 'cocteles/bourbon_sour.webp', ingredientes: 'Bourbon whiskey, zumo de limón fresco, sirope simple y clara de huevo. Un clásico equilibrado.', alergenos: ['🥚'] },
-
-            // CATEGORÍA: NUESTROS CLASICOS
-            { id: 15, categoria: 'NUESTROS CLASICOS', nombre: 'ESPRESSO MARTINI', precio: '10,00 €', foto: 'cocteles/espresso_martini.webp', ingredientes: 'Vodka, licor de café, café espresso recién hecho y sirope de azúcar. Un clásico estimulante.', alergenos: [] },
-            { id: 16, categoria: 'NUESTROS CLASICOS', nombre: 'TROPICAL', precio: '10,00 €', foto: 'cocteles/tropical.webp', ingredientes: 'Ron blanco, zumo de piña, crema de coco y un toque de lima. Refrescante y dulce.', alergenos: [] },
-            { id: 17, categoria: 'NUESTROS CLASICOS', nombre: 'MEDICINA', precio: '10,00 €', foto: 'cocteles/medicina.webp', ingredientes: 'Mezcla de destilados con notas cítricas y herbáceas. Una receta secreta de la casa para revivir.', alergenos: [] },
-            { id: 18, categoria: 'NUESTROS CLASICOS', nombre: 'PORNSTAR MARTINI', precio: '12,00 €', foto: 'cocteles/pornstar_martini.webp', ingredientes: 'Vodka vainilla, licor de maracuyá, puré de fruta de la pasión y un chupito de cava de acompañamiento.', alergenos: [] },
-            { id: 19, categoria: 'NUESTROS CLASICOS', nombre: 'PALOMA', precio: '10,00 €', foto: 'cocteles/paloma.webp', ingredientes: 'Tequila blanco, refresco de pomelo, zumo de lima y una pizca de sal. Muy refrescante.', alergenos: [] },
-            { id: 20, categoria: 'NUESTROS CLASICOS', nombre: 'MARGARITA GLADE', precio: '11,00 €', foto: 'cocteles/margarita_glade.webp', ingredientes: 'Nuestra versión cítrica y especial del clásico Margarita con tequila premium.', alergenos: [] },
-            { id: 21, categoria: 'NUESTROS CLASICOS', nombre: 'NATURALEZA', precio: '10,00 €', foto: 'cocteles/naturaleza.webp', ingredientes: 'Frescura botánica en cada sorbo. Ginebra, pepino, albahaca y tónica artesanal.', alergenos: [] },
-            { id: 22, categoria: 'NUESTROS CLASICOS', nombre: 'MOSKOW MULE', precio: '10,00 €', foto: 'cocteles/moskow_mule.webp', ingredientes: 'Vodka, ginger beer y zumo de lima fresco. Servido en su tradicional taza de cobre.', alergenos: [] },
-            { id: 23, categoria: 'NUESTROS CLASICOS', nombre: 'BRAVO', precio: '10,00 €', foto: 'cocteles/bravo.webp', ingredientes: 'Carácter fuerte y decidido. Mezcla audaz de espirituosos oscuros y notas amargas.', alergenos: [] },
-            { id: 24, categoria: 'NUESTROS CLASICOS', nombre: 'PUMMELO', precio: '10,00 €', foto: 'cocteles/pummelo.webp', ingredientes: 'Una explosión cítrica centrada en el pomelo, balanceada con destilados de alta calidad.', alergenos: [] },
-            { id: 25, categoria: 'NUESTROS CLASICOS', nombre: 'BOSQUE', precio: '11,00 €', foto: 'cocteles/bosque.webp', ingredientes: 'Aromas a pino y frutos del bosque. Ginebra infusionada, toques silvestres y moras.', alergenos: [] },
-            { id: 26, categoria: 'NUESTROS CLASICOS', nombre: 'ELEFANTE', precio: '10,00 €', foto: 'cocteles/elefante.webp', ingredientes: 'Exótico y corpulento. Notas especiadas, ron añejo, y sabores cálidos.', alergenos: [] },
-            { id: 27, categoria: 'NUESTROS CLASICOS', nombre: 'SELVA', precio: '10,00 €', foto: 'cocteles/selva.webp', ingredientes: 'Un viaje tropical intenso. Destilados macerados con frutas exóticas y frescura natural.', alergenos: [] },
+            { id: 15, categoria: 'COCKTAILS', nombre: 'ESPRESSO MARTINI', precio: '10,00 €', foto: 'cocteles/espresso_martini.webp', ingredientes: 'Vodka, licor de café, café espresso recién hecho y sirope de azúcar. Un clásico estimulante.', alergenos: [] },
+            { id: 16, categoria: 'COCKTAILS', nombre: 'TROPICAL', precio: '10,00 €', foto: 'cocteles/tropical.webp', ingredientes: 'Ron blanco, zumo de piña, crema de coco y un toque de lima. Refrescante y dulce.', alergenos: [] },
+            { id: 17, categoria: 'COCKTAILS', nombre: 'MEDICINA', precio: '10,00 €', foto: 'cocteles/medicina.webp', ingredientes: 'Mezcla de destilados con notas cítricas y herbáceas. Una receta secreta de la casa para revivir.', alergenos: [] },
+            { id: 18, categoria: 'COCKTAILS', nombre: 'PORNSTAR MARTINI', precio: '12,00 €', foto: 'cocteles/pornstar_martini.webp', ingredientes: 'Vodka vainilla, licor de maracuyá, puré de fruta de la pasión y un chupito de cava de acompañamiento.', alergenos: [] },
+            { id: 19, categoria: 'COCKTAILS', nombre: 'PALOMA', precio: '10,00 €', foto: 'cocteles/paloma.webp', ingredientes: 'Tequila blanco, refresco de pomelo, zumo de lima y una pizca de sal. Muy refrescante.', alergenos: [] },
+            { id: 20, categoria: 'COCKTAILS', nombre: 'MARGARITA GLADE', precio: '11,00 €', foto: 'cocteles/margarita_glade.webp', ingredientes: 'Nuestra versión cítrica y especial del clásico Margarita con tequila premium.', alergenos: [] },
+            { id: 21, categoria: 'COCKTAILS', nombre: 'NATURALEZA', precio: '10,00 €', foto: 'cocteles/naturaleza.webp', ingredientes: 'Frescura botánica en cada sorbo. Ginebra, pepino, albahaca y tónica artesanal.', alergenos: [] },
+            { id: 22, categoria: 'COCKTAILS', nombre: 'MOSKOW MULE', precio: '10,00 €', foto: 'cocteles/moskow_mule.webp', ingredientes: 'Vodka, ginger beer y zumo de lima fresco. Servido en su tradicional taza de cobre.', alergenos: [] },
+            { id: 23, categoria: 'COCKTAILS', nombre: 'BRAVO', precio: '10,00 €', foto: 'cocteles/bravo.webp', ingredientes: 'Carácter fuerte y decidido. Mezcla audaz de espirituosos oscuros y notas amargas.', alergenos: [] },
+            { id: 24, categoria: 'COCKTAILS', nombre: 'PUMMELO', precio: '10,00 €', foto: 'cocteles/pummelo.webp', ingredientes: 'Una explosión cítrica centrada en el pomelo, balanceada con destilados de alta calidad.', alergenos: [] },
+            { id: 25, categoria: 'COCKTAILS', nombre: 'BOSQUE', precio: '11,00 €', foto: 'cocteles/bosque.webp', ingredientes: 'Aromas a pino y frutos del bosque. Ginebra infusionada, toques silvestres y moras.', alergenos: [] },
+            { id: 26, categoria: 'COCKTAILS', nombre: 'ELEFANTE', precio: '10,00 €', foto: 'cocteles/elefante.webp', ingredientes: 'Exótico y corpulento. Notas especiadas, ron añejo, y sabores cálidos.', alergenos: [] },
+            { id: 27, categoria: 'COCKTAILS', nombre: 'SELVA', precio: '10,00 €', foto: 'cocteles/selva.webp', ingredientes: 'Un viaje tropical intenso. Destilados macerados con frutas exóticas y frescura natural.', alergenos: [] },
+            { id: 44, categoria: 'COCKTAILS', nombre: "NAKED N' FAMOUS", precio: '10,00 €', foto: 'cocteles/naked_famous.webp', ingredientes: 'Mezcal, Aperol, Chartreuse, Lima. Partes iguales para un equilibrio perfecto entre ahumado, amargo y cítrico.', alergenos: [] },
 
             // CATEGORÍA: COCKTAILS SIN ALCOHOL
             { id: 28, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'NATURALEZA', precio: '8,00 €', foto: 'cocteles/naturaleza_mocktail.webp', ingredientes: 'Frescura botánica pura. Pepino, albahaca, y tónica premium 0.0.', alergenos: [] },
-            { id: 29, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'SELVA', precio: '8,00 €', foto: 'cocteles/selva_mocktail.webp', ingredientes: 'Viaje tropical sin alcohol. Mezcla de zumos exóticos y frutas maceradas.', alergenos: [] },
             { id: 30, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'BANANA PIE', precio: '9,00 €', foto: 'cocteles/banana_pie_mocktail.webp', ingredientes: 'Crema de coco, puré de plátano, vainilla y sirope de almendras tostadas.', alergenos: ['🌰'] },
             { id: 31, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'PUMMELO', precio: '8,00 €', foto: 'cocteles/pummelo_mocktail.webp', ingredientes: 'Explosión cítrica centrada en el pomelo rosa, agave y agua con gas.', alergenos: [] },
             { id: 32, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'COCO Y LIMON', precio: '8,00 €', foto: 'cocteles/coco_limon_mocktail.webp', ingredientes: 'Equilibrio perfecto entre la cremosidad del coco y la acidez del limón fresco.', alergenos: [] },
-            { id: 33, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'LICHI', precio: '8,50 €', foto: 'cocteles/lichi_mocktail.webp', ingredientes: 'Delicado y floral. Zumo de lichi, toques florales y soda refrescante.', alergenos: [] },
             { id: 34, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'SCARLET', precio: '8,00 €', foto: 'cocteles/scarlet_mocktail.webp', ingredientes: 'Aromas frutales vívidos. Frutos rojos machacados, cítricos y toque botánico cero alcohol.', alergenos: [] },
             { id: 35, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'EMMA', precio: '8,00 €', foto: 'cocteles/emma_mocktail.webp', ingredientes: 'Elegante y suave. Mix de frutas blancas, flor de saúco y burbuja fina.', alergenos: [] },
-            { id: 36, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'ROSAS', precio: '8,50 €', foto: 'cocteles/rosas_mocktail.webp', ingredientes: 'Agua de rosas, infusiones botánicas y un perfil floral inconfundible.', alergenos: [] },
-            { id: 37, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'BERRY COLLINS', precio: '8,00 €', foto: 'cocteles/berry_collins_mocktail.webp', ingredientes: 'Refrescante y efervescente. Zumo de limón, frutos rojos frescos y soda.', alergenos: [] },
+            { id: 40, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'KOH LIPE', precio: '8,00 €', foto: 'cocteles/koh_lipe_mocktail.webp', ingredientes: 'Inspirado en las playas de Tailandia. Zumos tropicales, coco y un toque de lima.', alergenos: [] },
+            { id: 41, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'MESTIZO', precio: '8,00 €', foto: 'cocteles/mestizo_mocktail.webp', ingredientes: 'Fusión de sabores. Especias suaves, frutas exóticas y agua de coco.', alergenos: [] },
+            { id: 42, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'MEU AMOR', precio: '8,00 €', foto: 'cocteles/meu_amor_mocktail.webp', ingredientes: 'Romántico y dulce. Frutas rojas, flor de rosa y toque de vainilla.', alergenos: [] },
+            { id: 43, categoria: 'COCKTAILS SIN ALCOHOL', nombre: 'JARDÍN FLORIDO', precio: '8,00 €', foto: 'cocteles/jardin_florido_mocktail.webp', ingredientes: 'Floral y fresco. Infusión de flores, frambuesa y soda artesanal.', alergenos: [] },
 
             // CATEGORÍA: BATIDOS
             { id: 38, categoria: 'BATIDOS', nombre: 'MANGO - FRUTOS ROJOS - COCO', precio: '7,00 €', foto: 'batidos/mango_coco.webp', ingredientes: 'Batido natural y refrescante a base de mango dulce, selección de frutos rojos y cremosa leche de coco.', alergenos: [] },
